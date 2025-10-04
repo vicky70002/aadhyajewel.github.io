@@ -1,481 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aadhya Jewellery - Elegance Redefined</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aadhya Jewellery — Your Perfect Jewellery Collection</title>
+  <meta name="description" content="Elegant artificial jewellery — necklaces, earrings, bracelets, and rings." />
+  <link rel="preconnect" href="">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loading-spinner"></div>
-        <p>Loading Aadhya Jewellery...</p>
+  <!-- Promo Ribbon -->
+  <div class="promo">
+    <span>Festive Offer: Flat 20% OFF sitewide — Code: FESTIVE20</span>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="header" id="top">
+    <nav class="nav container">
+      <div class="brand">Aadhya Jewellery</div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#bestsellers">Collections</a></li>
+        <li><a href="#categories">Shop by Category</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact" class="btn btn--ghost">Contact</a></li>
+      </ul>
+      <a class="cart" href="#cart" aria-label="Cart">🛒</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero__content">
+      <h1>Your Perfect Jewellery Collection</h1>
+      <p>Discover exquisite artificial jewellery crafted for weddings, parties, and everyday elegance.</p>
+      <a href="#bestsellers" class="btn btn--primary">Shop Bestsellers</a>
     </div>
+  </section>
 
-    <!-- Top Promotional Banner -->
-    <div class="promo-banner">
-        <p>🎉 SPECIAL OFFER: Get 25% OFF on all jewellery! Use code FESTIVE25 ✨ Free shipping above ₹1999</p>
+  <!-- Bestsellers -->
+  <section class="section" id="bestsellers">
+    <div class="container">
+      <div class="section__head">
+        <h2>Bestsellers</h2>
+        <a href="#all" class="section__link">View All</a>
+      </div>
+
+      <div class="grid products">
+        <!-- Product Card -->
+        <article class="product">
+          <div class="product__img" aria-hidden="true"></div>
+          <h3>Elegant Kundan Necklace Set</h3>
+          <p class="product__reviews">15 reviews ★★★★☆</p>
+          <p class="product__price"><span class="strike">₹ 1,990</span> <span class="sale">₹ 1,592</span> <span class="tag">20% off</span></p>
+          <button class="btn btn--outline add-to-cart" data-name="Elegant Kundan Necklace Set" data-price="1592">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <div class="product__img" aria-hidden="true"></div>
+          <h3>Rose Gold Pearl Earrings</h3>
+          <p class="product__reviews">12 reviews ★★★★☆</p>
+          <p class="product__price"><span class="strike">₹ 890</span> <span class="sale">₹ 712</span> <span class="tag">20% off</span></p>
+          <button class="btn btn--outline add-to-cart" data-name="Rose Gold Pearl Earrings" data-price="712">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <div class="product__img" aria-hidden="true"></div>
+          <h3>Traditional Choker Set</h3>
+          <p class="product__reviews">18 reviews ★★★★☆</p>
+          <p class="product__price"><span class="strike">₹ 1,490</span> <span class="sale">₹ 1,192</span> <span class="tag">20% off</span></p>
+          <button class="btn btn--outline add-to-cart" data-name="Traditional Choker Set" data-price="1192">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <div class="product__img" aria-hidden="true"></div>
+          <h3>Bridal Maang Tikka</h3>
+          <p class="product__reviews">8 reviews ★★★★☆</p>
+          <p class="product__price"><span class="strike">₹ 790</span> <span class="sale">₹ 632</span> <span class="tag">20% off</span></p>
+          <button class="btn btn--outline add-to-cart" data-name="Bridal Maang Tikka" data-price="632">Add to Cart</button>
+        </article>
+
+        <article class="product">
+          <div class="product__img" aria-hidden="true"></div>
+          <h3>Antique Gold Bangles Set</h3>
+          <p class="product__reviews">10 reviews ★★★★☆</p>
+          <p class="product__price"><span class="strike">₹ 1,290</span> <span class="sale">₹ 1,032</span> <span class="tag">20% off</span></p>
+          <button class="btn btn--outline add-to-cart" data-name="Antique Gold Bangles Set" data-price="1032">Add to Cart</button>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="container">
-                <div class="nav-content">
-                    <div class="logo" onclick="showPage('home')">
-                        <h1>Aadhya Jewellery</h1>
-                        <span class="tagline">Elegance Redefined</span>
-                    </div>
-                    
-                    <div class="search-bar">
-                        <input type="text" id="search-input" placeholder="Search for jewellery..." />
-                        <button id="search-btn">🔍</button>
-                    </div>
-                    
-                    <ul class="nav-menu">
-                        <li><a href="#" onclick="showPage('home')">Home</a></li>
-                        <li><a href="#" onclick="showPage('products')">Products</a></li>
-                        <li><a href="#" onclick="showPage('about')">About</a></li>
-                        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-                        <li><a href="#" onclick="showPage('cart')" class="cart-link" id="cart-link">🛒 Cart</a></li>
-                    </ul>
-                    
-                    <div class="mobile-menu-toggle" id="mobile-menu-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Home Page -->
-    <div id="page-home" class="page active">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h2 class="hero-title">Crafting Beautiful Memories</h2>
-                    <p class="hero-subtitle">Discover exquisite artificial jewellery that celebrates your special moments with timeless elegance</p>
-                    <button class="btn btn--primary btn--lg hero-cta" onclick="showPage('products')">Shop Collection</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Categories -->
-        <section class="featured-categories">
-            <div class="container">
-                <h3 class="section-title">Shop by Category</h3>
-                <div class="categories-grid">
-                    <div class="category-card" onclick="filterByCategory('Necklaces')">
-                        <div class="category-icon">📿</div>
-                        <h4>Necklaces</h4>
-                        <p>156 Products</p>
-                    </div>
-                    <div class="category-card" onclick="filterByCategory('Earrings')">
-                        <div class="category-icon">💎</div>
-                        <h4>Earrings</h4>
-                        <p>142 Products</p>
-                    </div>
-                    <div class="category-card" onclick="filterByCategory('Bracelets')">
-                        <div class="category-icon">🔗</div>
-                        <h4>Bracelets</h4>
-                        <p>98 Products</p>
-                    </div>
-                    <div class="category-card" onclick="filterByCategory('Rings')">
-                        <div class="category-icon">💍</div>
-                        <h4>Rings</h4>
-                        <p>87 Products</p>
-                    </div>
-                    <div class="category-card" onclick="filterByCategory('Bridal Sets')">
-                        <div class="category-icon">👑</div>
-                        <h4>Bridal Sets</h4>
-                        <p>64 Products</p>
-                    </div>
-                    <div class="category-card" onclick="filterByCategory('Accessories')">
-                        <div class="category-icon">✨</div>
-                        <h4>Accessories</h4>
-                        <p>53 Products</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bestsellers -->
-        <section class="bestsellers">
-            <div class="container">
-                <div class="section-header">
-                    <h3>Bestselling Jewellery</h3>
-                    <button class="btn btn--outline" onclick="showPage('products')">View All →</button>
-                </div>
-                <div class="products-grid" id="bestsellers-grid">
-                    <!-- Bestsellers will be loaded here by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section class="testimonials">
-            <div class="container">
-                <h3 class="section-title">What Our Customers Say</h3>
-                <div class="testimonials-slider">
-                    <div class="testimonial-slide active">
-                        <p>"Absolutely love my kundan necklace set! The quality is amazing for artificial jewellery and I received so many compliments at my friend's wedding."</p>
-                        <div class="testimonial-author">— Priya Sharma, Mumbai</div>
-                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p>"The rose gold bangles are exactly as shown in the pictures. Beautiful finishing and very comfortable to wear all day long."</p>
-                        <div class="testimonial-author">— Anita Gupta, Delhi</div>
-                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p>"Ordered a complete bridal set and I'm blown away by the quality! Perfect for my engagement ceremony. Highly recommend Aadhya Jewellery."</p>
-                        <div class="testimonial-author">— Kavya Reddy, Bangalore</div>
-                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    </div>
-                </div>
-                <div class="testimonials-nav">
-                    <button class="testimonial-prev">‹</button>
-                    <button class="testimonial-next">›</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter -->
-        <section class="newsletter">
-            <div class="container">
-                <div class="newsletter-content">
-                    <h3>Stay Updated</h3>
-                    <p>Subscribe to get special offers and new arrivals</p>
-                    <form class="newsletter-form" id="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn--primary">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+  <!-- Festive Offer Banner -->
+  <section class="banner">
+    <div class="container">
+      <p>Festive Offers Live: Extra 10% OFF on orders above ₹2,499 — Limited time</p>
+      <a class="btn btn--primary" href="#bestsellers">Explore Offers</a>
     </div>
+  </section>
 
-    <!-- Products Page -->
-    <div id="page-products" class="page">
-        <section class="products-page">
-            <div class="container">
-                <div class="page-header">
-                    <h2>Our Jewellery Collection</h2>
-                    <div class="products-controls">
-                        <div class="filters">
-                            <select id="category-filter">
-                                <option value="">All Categories</option>
-                                <option value="Necklaces">Necklaces</option>
-                                <option value="Earrings">Earrings</option>
-                                <option value="Bracelets">Bracelets</option>
-                                <option value="Rings">Rings</option>
-                                <option value="Bridal Sets">Bridal Sets</option>
-                                <option value="Accessories">Accessories</option>
-                            </select>
-                            <div class="price-filter">
-                                <label>Price Range:</label>
-                                <input type="range" id="price-range" min="0" max="5000" value="5000">
-                                <span id="price-display">₹0 - ₹5000</span>
-                            </div>
-                        </div>
-                        <div class="sort-options">
-                            <label>Sort by:</label>
-                            <select id="sort-select">
-                                <option value="popularity">Popularity</option>
-                                <option value="price-low">Price: Low to High</option>
-                                <option value="price-high">Price: High to Low</option>
-                                <option value="rating">Rating</option>
-                                <option value="newest">Newest</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="products-grid" id="products-grid">
-                    <!-- Products will be loaded here by JavaScript -->
-                </div>
-                <div class="pagination" id="pagination">
-                    <!-- Pagination will be added by JavaScript -->
-                </div>
-            </div>
-        </section>
+  <!-- Categories -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section__head">
+        <h2>Shop by Category</h2>
+      </div>
+      <div class="grid categories">
+        <a class="cat" href="#necklaces" data-cat="NECKLACES">NECKLACES</a>
+        <a class="cat" href="#earrings" data-cat="EARRINGS">EARRINGS</a>
+        <a class="cat" href="#bracelets" data-cat="BRACELETS">BRACELETS</a>
+        <a class="cat" href="#rings" data-cat="RINGS">RINGS</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Product Detail Page -->
-    <div id="page-product-detail" class="page">
-        <section class="product-detail">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="#" onclick="showPage('home')">Home</a> › 
-                    <a href="#" onclick="showPage('products')">Products</a> › 
-                    <span id="product-breadcrumb"></span>
-                </div>
-                <div class="product-detail-content" id="product-detail-content">
-                    <!-- Product details will be loaded here by JavaScript -->
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Cart Page -->
-    <div id="page-cart" class="page">
-        <section class="cart-page">
-            <div class="container">
-                <h2>Shopping Cart</h2>
-                <div class="cart-content">
-                    <div class="cart-items" id="cart-items">
-                        <!-- Cart items will be loaded here by JavaScript -->
-                    </div>
-                    <div class="cart-summary" id="cart-summary">
-                        <!-- Cart summary will be loaded here by JavaScript -->
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- About Page -->
-    <div id="page-about" class="page">
-        <section class="about-page">
-            <div class="container">
-                <div class="about-hero">
-                    <h2>About Aadhya Jewellery</h2>
-                    <p class="about-subtitle">Crafting beautiful artificial jewellery since 2020</p>
-                </div>
-                
-                <div class="about-content">
-                    <div class="about-story">
-                        <h3>Our Story</h3>
-                        <p>Founded in 2020, Aadhya Jewellery was born from a passion to make every woman feel special with exquisite, affordable luxury jewellery. We believe that beautiful jewellery should be accessible to everyone, without compromising on quality or design.</p>
-                        
-                        <h3>Our Mission</h3>
-                        <p>To make every woman feel special with our exquisite collection of affordable luxury jewellery. We craft each piece with attention to detail, ensuring that you receive nothing but the best.</p>
-                        
-                        <h3>Quality Commitment</h3>
-                        <p>Every piece of jewellery goes through rigorous quality checks. We use premium materials and ensure that each item meets our high standards before it reaches you.</p>
-                    </div>
-                    
-                    <div class="about-features">
-                        <h3>Why Choose Aadhya Jewellery?</h3>
-                        <div class="features-grid">
-                            <div class="feature-item">
-                                <div class="feature-icon">✨</div>
-                                <h4>Premium Quality</h4>
-                                <p>High-quality artificial jewellery with authentic look</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🚚</div>
-                                <h4>Free Shipping</h4>
-                                <p>Free shipping on orders above ₹1999</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🔄</div>
-                                <h4>Easy Returns</h4>
-                                <p>7-day return policy with no questions asked</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🛡️</div>
-                                <h4>Quality Guarantee</h4>
-                                <p>Quality guarantee on all our products</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">💬</div>
-                                <h4>24/7 Support</h4>
-                                <p>Round the clock customer support</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🎁</div>
-                                <h4>Gift Wrapping</h4>
-                                <p>Beautiful gift wrapping available</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Contact Page -->
-    <div id="page-contact" class="page">
-        <section class="contact-page">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Get in Touch</h3>
-                        <div class="contact-item">
-                            <strong>Address:</strong>
-                            <p>123 Fashion Street, Jewellery District<br>Mumbai - 400001</p>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Phone:</strong>
-                            <p>+91 98765 43210</p>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Email:</strong>
-                            <p>hello@aadhyajewellery.com</p>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Business Hours:</strong>
-                            <p>Monday - Saturday: 10:00 AM - 8:00 PM<br>Sunday: 11:00 AM - 6:00 PM</p>
-                        </div>
-                        <div class="social-links">
-                            <h4>Follow Us</h4>
-                            <div class="social-icons">
-                                <a href="#" target="_blank">📘 Facebook</a>
-                                <a href="#" target="_blank">📷 Instagram</a>
-                                <a href="#" target="_blank">🐦 Twitter</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-form">
-                        <h3>Send us a Message</h3>
-                        <form id="contact-form">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Name *</label>
-                                <input type="text" id="name" name="name" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email *</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Phone</label>
-                                <input type="tel" id="phone" name="phone" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="subject" class="form-label">Subject *</label>
-                                <select id="subject" name="subject" class="form-control" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="order">Order Related</option>
-                                    <option value="return">Return/Exchange</option>
-                                    <option value="complaint">Complaint</option>
-                                    <option value="suggestion">Suggestion</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" class="form-label">Message *</label>
-                                <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="map-placeholder">
-                    <div class="map-content">
-                        <h4>Visit Our Store</h4>
-                        <p>📍 123 Fashion Street, Jewellery District, Mumbai - 400001</p>
-                        <p style="font-style: italic; color: var(--color-text-secondary);">[Google Maps would be embedded here]</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Product Quick View Modal -->
-    <div id="quick-view-modal" class="modal hidden">
-        <div class="modal-overlay" onclick="closeModal('quick-view-modal')"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('quick-view-modal')">&times;</button>
-            <div id="quick-view-content">
-                <!-- Quick view content will be loaded here -->
-            </div>
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section__head">
+        <h2>Aadhya Jewellery Customer Testimonials</h2>
+      </div>
+      <div class="testi">
+        <div class="testi__slides">
+          <blockquote class="testi__slide active">“I absolutely love my kundan necklace set — elegant and lightweight, got endless compliments.” — PRIYA SHARMA</blockquote>
+          <blockquote class="testi__slide">“Rose gold earrings look real and feel premium, great finish and timely delivery.” — ANITA GUPTA</blockquote>
+          <blockquote class="testi__slide">“The bridal set was beautiful and comfortable all day — highly recommended.” — KAVYA REDDY</blockquote>
+          <blockquote class="testi__slide">“Traditional choker looks like real gold, impressive craftsmanship and service.” — MEERA JOSHI</blockquote>
+          <blockquote class="testi__slide">“Antique bangles are my favourite — gorgeous designs at fair prices.” — RASHMI PATEL</blockquote>
         </div>
-    </div>
-
-    <!-- Wishlist Modal -->
-    <div id="wishlist-modal" class="modal hidden">
-        <div class="modal-overlay" onclick="closeModal('wishlist-modal')"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('wishlist-modal')">&times;</button>
-            <div class="modal-header">
-                <h3>My Wishlist</h3>
-            </div>
-            <div id="wishlist-content">
-                <!-- Wishlist content will be loaded here -->
-            </div>
+        <div class="testi__controls">
+          <button class="testi__btn" id="prev">‹</button>
+          <button class="testi__btn" id="next">›</button>
         </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h4>Aadhya Jewellery</h4>
-                    <p>Elegance Redefined</p>
-                    <p class="footer-description">Crafting beautiful artificial jewellery that celebrates your special moments with timeless elegance and contemporary design.</p>
-                </div>
-                <div class="footer-links">
-                    <h5>Quick Links</h5>
-                    <ul>
-                        <li><a href="#" onclick="showPage('about')">About Us</a></li>
-                        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-                        <li><a href="#">Size Guide</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Track Order</a></li>
-                    </ul>
-                </div>
-                <div class="footer-policies">
-                    <h5>Policies</h5>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h5>Contact Info</h5>
-                    <p>📧 hello@aadhyajewellery.com</p>
-                    <p>📞 +91 98765 43210</p>
-                    <p>📍 Mumbai, India</p>
-                    <div class="social-icons">
-                        <a href="#" target="_blank">📘</a>
-                        <a href="#" target="_blank">📷</a>
-                        <a href="#" target="_blank">🐦</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Aadhya Jewellery. All rights reserved. | Designed with ❤️ for beautiful women</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top hidden">↑</button>
-
-    <!-- Toast Notifications Container -->
-    <div id="toast-container" class="toast-container"></div>
-
-    <!-- Live Chat Widget -->
-    <div class="chat-widget">
-        <button class="chat-toggle" id="chat-toggle">💬</button>
-        <div class="chat-window hidden" id="chat-window">
-            <div class="chat-header">
-                <h4>Live Chat</h4>
-                <button onclick="toggleChat()">&times;</button>
-            </div>
-            <div class="chat-messages" id="chat-messages">
-                <div class="chat-message bot">
-                    <p>Hello! 👋 Welcome to Aadhya Jewellery. How can I help you today?</p>
-                </div>
-            </div>
-            <div class="chat-input">
-                <input type="text" id="chat-input" placeholder="Type your message...">
-                <button onclick="sendChatMessage()">Send</button>
-            </div>
-        </div>
+  <!-- Contact / Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+      <div>
+        <h3>Aadhya Jewellery</h3>
+        <p>Elegant artificial jewellery for every occasion.</p>
+      </div>
+      <div>
+        <h4>Help & Info</h4>
+        <ul>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Shipping & Delivery</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Customer Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <!-- Replace action with Formspree endpoint when created -->
+        <form id="contact-form" action="" method="POST" class="contact-form" novalidate>
+          <input name="name" type="text" placeholder="Name" required />
+          <input name="email" type="email" placeholder="Email" required />
+          <textarea name="message" rows="4" placeholder="Message" required></textarea>
+          <button class="btn btn--primary" type="submit">Send</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </div>
+    <div class="footer__bottom">
+      <p>© <span id="y"></span> Aadhya Jewellery • All rights reserved</p>
+    </div>
+  </footer>
 
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
